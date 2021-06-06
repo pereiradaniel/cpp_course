@@ -12,3 +12,9 @@ Shape* Sphere::clone() const {
 double Sphere::volume() const {
     return 4.18879 * rad * rad * rad;
 }
+
+bool Sphere::operator==(const Shape& s)
+const {
+    const Sphere* c = dynamic_cast<const Sphere*>(&s);
+    return c ? rad == c->rad : false;
+}

@@ -10,5 +10,10 @@ public:
     // To determine the dynamic type at run-time we introduce a cloning member function to the hierarchy.
     // Let us upgrade the Shape interface to expose a clone() query.  This member function returns the address of a copy of the object created using its dynamic type.
     virtual Shape* clone() const = 0;
+
+    // Let us upgrade the Shape interface to expose a query for comparing objects.
+    // This function receives the address of an object and return true if the object has the same properties as the current object:
+
+    virtual bool operator==(const Shape&) const = 0;
 };
 #endif

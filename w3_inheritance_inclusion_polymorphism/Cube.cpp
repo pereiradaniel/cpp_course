@@ -13,3 +13,9 @@ Shape* Cube::clone() const {
 double Cube::volume() const {
     return len * len * len;
 }
+
+// Casting from the abstract Shape* type to a concrete Cube* or Sphere* type enables access to a respective complete object.
+bool Cube::operator==(const Shape& s) const {
+    const Cube* c = dynamic_cast<const Cube*>(&s);
+    return c ? len == c->len : false;
+}

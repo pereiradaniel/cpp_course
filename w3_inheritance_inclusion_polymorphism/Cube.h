@@ -8,4 +8,6 @@ public:
     double volume() const;
     // The definition of each concrete class declares the clone() query:
     Shape* clone() const;
+    bool operator==(const Shape&)
+      const;
 };
