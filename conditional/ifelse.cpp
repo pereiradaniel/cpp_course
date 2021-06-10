@@ -19,5 +19,6 @@ int main()
         cout << "Odd number";
     }
 
+    cout << endl << "Program complete";
     system("pause>0");
 }
