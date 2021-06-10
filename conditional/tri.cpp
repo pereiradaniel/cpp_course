@@ -11,13 +11,12 @@ int main()
     {
         cout << "Equilateral";
     }
-    else if (a!=b && a!=c && b!=c)
-    {
-        cout << "Scalene";
-    }
     else
     {
-        cout << "Isosceles";
+        if (a!=b && a!=c && b!=c)
+            cout << "Scalene";
+        else
+            cout << "Isosceles";
     }
 
     cout << endl << "Program complete";
