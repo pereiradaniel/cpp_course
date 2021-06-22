@@ -1,5 +1,5 @@
 // Templates and Inheritance
-// templates_inheritance.h
+// templates_inheritance_.h
 #include <iostream>
 template<typename T>
 class Base {
@@ -8,8 +8,10 @@ public:
     void set(const T& v) { value = v; }
     void display() const { std::cout << value << std::endl; } 
 };
-template<typename T>
+template<typename S, typename T>
 class Derived : public Base<T> {
+    S value;
 public:
-    void set(const T& v) { Base<T>::set(v); }
+    Derived(const S& v) : value{v}{}
+    void set(const T& v) { Base<T>::set(v + value); }
 };
