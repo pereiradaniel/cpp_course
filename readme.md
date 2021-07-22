@@ -1,7 +1,5 @@
 # Information
----
-cpp notes and examples from various sources:
-
+*cpp notes and examples from various sources:*
 | Source | Notes |Completion |
 | ----------- | ----------- | ----------- |
 | [Codeboeauty C++ FULL COURSE](https://youtu.be/GQp1zzTwrIg) | [Jump to code](https://github.com/pereiradaniel/cpp_course/tree/master/Codebeauty) | Incomplete |
