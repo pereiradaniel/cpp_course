@@ -3,10 +3,13 @@ using namespace std;
 int main()
 {
     int userPin=1234, inputPin, errorCounter=0;
-
     do{
-        
-    } while();
-
+        cout<<"PIN: ";
+        cin >> inputPin;
+        if(inputPin!=userPin)
+            errorCounter++;
+    } while(errorCounter<3 && inputPin!=userPin);
+    errorCounter<3 ? cout<<"Loading..." :
+        cout<<"LOCKED!";
     system("pause>0");
 }
