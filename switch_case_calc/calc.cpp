@@ -31,7 +31,8 @@ int main()
         else
             cout << "Not valid";
         break;
-
+    default:
+        cout<<"Invalid operation"<<endl;
     }
 
     system("pause>0");
