@@ -5,25 +5,37 @@ using namespace std;
 // classes are a user-defined data type
 class YouTubeChannel {
 public:
-    string name;
+    string Name;
     string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
+
+    //constructor
+    YouTubeChannel(string newName, string newOwnerName) : SubscribersCount(0) {
+        Name = newName;
+        OwnerName = newOwnerName;
+    }
+
+    void GetInfo() {
+        cout << "Name: " << Name << endl;
+        cout << "OwnerName: " << OwnerName << endl;
+        cout << "SubscribersCount: " << SubscribersCount << endl;
+        cout << "Videos: " << endl;
+        for (string videoTitle: PublishedVideoTitles)
+            cout << videoTitle << endl;
+    }
 };
 
 int main()
 {
-    YouTubeChannel ytChannel;
-    ytChannel.name = "ChannelName";
-    ytChannel.OwnerName = "OwnerName";
-    ytChannel.SubscribersCount = 100;
-    ytChannel.PublishedVideoTitles = {"Title1", "Title2"};
+    YouTubeChannel ytChannel1("ChannelName1", "OwnerName1");
+    ytChannel1.PublishedVideoTitles.push_back("Title1");
+    ytChannel1.PublishedVideoTitles.push_back("Title2");
+    
+    YouTubeChannel ytChannel2("ChannelName2", "OwnerName2");
 
-    cout << "Name: " << ytChannel.name << endl;
-    cout << "OwnerName: " << ytChannel.OwnerName << endl;
-    cout << "SubscribersCount: " << ytChannel.SubscribersCount << endl;
-    cout << "Videos: " << endl;
-    for (string videoTitle: ytChannel.PublishedVideoTitles)
-        cout << videoTitle << endl;
+    ytChannel1.GetInfo();
+    ytChannel2.GetInfo();
+
     system("pause>0");
 }
