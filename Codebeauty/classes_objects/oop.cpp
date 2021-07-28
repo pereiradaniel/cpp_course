@@ -40,8 +40,21 @@ public:
     }
 };
 
+// derived class
+class CookingYouTubeChannel : public YouTubeChannel {
+    public:
+    CookingYouTubeChannel(string name, string ownerName):YouTubeChannel(name, ownerName) {
+    }
+    void Practice() {
+        cout << "Practicing..."<<endl;
+    }
+
+};
+
 int main()
 {
+
+    // Create two base class channels:
     YouTubeChannel ytChannel1("ChannelName1", "OwnerName1");
     ytChannel1.Subscribe();
     ytChannel1.Unsubscribe();
@@ -51,12 +64,19 @@ int main()
     ytChannel1.GetName();
     ytChannel1.SetName("NameChanged");
     ytChannel1.GetName();
-
     
     YouTubeChannel ytChannel2("ChannelName2", "OwnerName2");
 
+    // Display channels:
     ytChannel1.GetInfo();
     ytChannel2.GetInfo();
+
+    // Create derived class channel:
+    CookingYouTubeChannel ytChannel("Kitchen Channel", "Kitchen Owner");
+    ytChannel.PublishVideo("Recipe 1");
+    ytChannel.PublishVideo("Recipe 2");
+    ytChannel.GetInfo();
+    ytChannel.Practice();
 
     system("pause>0");
 }
