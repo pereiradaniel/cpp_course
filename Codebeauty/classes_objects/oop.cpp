@@ -6,9 +6,10 @@ using namespace std;
 class YouTubeChannel {
 private:
     string Name;
-    string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
+protected:
+    string OwnerName;
 public:
     //constructor
     YouTubeChannel(string newName, string newOwnerName) : SubscribersCount(0) {
@@ -46,7 +47,7 @@ class CookingYouTubeChannel : public YouTubeChannel {
     CookingYouTubeChannel(string name, string ownerName):YouTubeChannel(name, ownerName) {
     }
     void Practice() {
-        cout << "Practicing..."<<endl;
+        cout << OwnerName << " is practicing..."<<endl;
     }
 
 };
