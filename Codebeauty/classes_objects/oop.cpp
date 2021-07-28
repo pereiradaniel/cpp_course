@@ -10,9 +10,10 @@ private:
     list<string> PublishedVideoTitles;
 protected:
     string OwnerName;
+    int ContentQuality;
 public:
     //constructor
-    YouTubeChannel(string newName, string newOwnerName) : SubscribersCount(0) {
+    YouTubeChannel(string newName, string newOwnerName) : SubscribersCount(0), ContentQuality(0) {
         Name = newName;
         OwnerName = newOwnerName;
     }
@@ -39,6 +40,12 @@ public:
     void SetName(string newName) {
         Name = newName;
     }
+    void CheckAnalytics() {
+        if (ContentQuality<5)
+            cout << "Bad quality content." << endl;
+        else
+            cout << "Good quality content." << endl;
+    }
 };
 
 // derived class
@@ -48,9 +55,21 @@ class CookingYouTubeChannel : public YouTubeChannel {
     }
     void Practice() {
         cout << OwnerName << " is practicing..."<<endl;
+        ContentQuality++;
     }
-
 };
+
+// derived class
+class SingersYouTubeChannel : public YouTubeChannel {
+    public:
+    SingersYouTubeChannel(string name, string ownerName):YouTubeChannel(name, ownerName) {
+    }
+    void Practice() { // different implementation from cooking channel!
+        cout << OwnerName << " is singing..."<<endl;
+        ContentQuality++;
+    }
+};
+
 
 int main()
 {
@@ -78,6 +97,21 @@ int main()
     ytChannel.PublishVideo("Recipe 2");
     ytChannel.GetInfo();
     ytChannel.Practice();
+
+    // Create singing channel:
+    SingersYouTubeChannel singersYtChannel("Singing Channel", "Singer");
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+
+    YouTubeChannel * yt1 = &ytChannel;
+    YouTubeChannel * yt2 = &singersYtChannel;
+    yt1->CheckAnalytics();
+    yt2->CheckAnalytics();
+
 
     system("pause>0");
 }
