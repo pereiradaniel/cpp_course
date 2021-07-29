@@ -6,9 +6,9 @@ int main()
     int luckyNumbers[5] = { 2, 3, 5, 7, 9};
     
     // the name of the array is the address of its first element
-    cout << luckyNumbers << endl;
+    cout << luckyNumbers << endl;   // prints address of the first element of the array
     // first element of the array
-    cout << &luckyNumbers[0] << endl;
+    cout << &luckyNumbers[0] << endl; // matches above output
 
     // [] acts as dereferencing for array elements
     cout << luckyNumbers[2] << endl;
