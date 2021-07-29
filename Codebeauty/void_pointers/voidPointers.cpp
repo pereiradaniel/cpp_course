@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-
+// Special type of pointer that can hold the value of any data type.
+// You cannot directly dereference a void pointer!
 // needs to be passed an integer pointer
 void printNumber(int* numberPtr) {
     // print out value that numberPtr is pointing to
