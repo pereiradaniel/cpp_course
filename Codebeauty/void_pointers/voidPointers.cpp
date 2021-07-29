@@ -2,12 +2,13 @@
 using namespace std;
 // Special type of pointer that can hold the value of any data type.
 // You cannot directly dereference a void pointer!
-// needs to be passed an integer pointer
+
+// function that prints an integer
 void printNumber(int* numberPtr) {
     // print out value that numberPtr is pointing to
     cout << *numberPtr << endl; // dereference pointer!
 }
-
+// function that prints a char
 void printLetter(char* charPtr) {
     cout << *charPtr << endl;
 }
