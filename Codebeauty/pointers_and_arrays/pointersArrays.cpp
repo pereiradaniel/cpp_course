@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
+    // Creates an array of int with indexes 0-4
     int luckyNumbers[5] = { 2, 3, 5, 7, 9};
     
     // the name of the array is the address of its first element
