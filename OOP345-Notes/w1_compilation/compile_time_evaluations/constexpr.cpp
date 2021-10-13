@@ -12,3 +12,5 @@ int main() {
     system("pause");
     return 0;
 }
+
+// Both the variable N and the function factorial are evaluated at compile-time and the result is stored as a constant value in the output stream expression.
