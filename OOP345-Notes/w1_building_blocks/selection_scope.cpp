@@ -7,8 +7,9 @@ int main() {
      std::cin >> i;
      if (int j = i % 10; j < 5) { // C++17
          i -= j;      // round down
+         std::cout << "i: " << i << '\n';
+         std::cout << "j: " << j << '\n';
      } else {
-         std::cout << j;
          i += 10 - j; // round up
      }
 
@@ -19,9 +20,13 @@ int main() {
     
     switch (int j = i % 10; j / 5) { // C++17
     case 0: // round down
+        std::cout << "i: " << i << '\n';
+        std::cout << "j: " << j << '\n';
         i -= j;
          break;
     case 1: // round up
+        std::cout << "i: " << i << '\n';
+        std::cout << "j: " << j << '\n';
         i += 10 - j;
     }
     
