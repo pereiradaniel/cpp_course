@@ -1,5 +1,9 @@
 // Selection Constructs - Block Scope
 // selection_scope.cpp
+
+// Compile with c++17 standard!
+// cl /std:c++17 selection_scope.cpp
+
 #include <iostream>
 int main() {
      int i;
