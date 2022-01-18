@@ -7,8 +7,8 @@
 #include <iostream>
 int main () {
     int a[] {1, 2, 3, 4, 5, 6};
-    const auto n = 6;
-    for (auto i = 0; i < n; i++)
+    const auto n = 6;   // Infers int from value of 6
+    for (auto i = 0; i < n; i++)    // Infers int from value of 0
         std::cout << a[i] << ' ';
     std::cout << std::endl;
 }
