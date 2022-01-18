@@ -1,5 +1,11 @@
 // rvalue Reference using std::move()
 // std_move.cpp
+
+// The standard library provides two functions for specifying the type of reference when that is important:
+
+// std::ref() - returns an lvalue reference to its argument (important of functions in the standard library)
+// std::move() - returns an rvalue reference to its argument
+
 #include <iostream>
 #include <utility>
 class A {
