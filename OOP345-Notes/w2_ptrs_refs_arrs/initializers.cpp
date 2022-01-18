@@ -9,24 +9,31 @@ int main() {
     int d[5]{};
     int* f = new int[n]{ 1,2,3 };
     int* g = new int[n]{};
-for (int e : a) // range-based for (see below)
-        std::cout << e;
+
+    for (int e : a) // range-based for (see below)
+        std::cout << e; // 123|
     std::cout << '|' << std::endl;
+
     for (int e : b)
-        std::cout << e;
+            std::cout << e; // 123|
     std::cout << '|' << std::endl;
+
     for (int e : c)
-        std::cout << e;
+        std::cout << e; // 12300|
     std::cout << '|' << std::endl;
+
     for (int e : d)
-        std::cout << e;
+        std::cout << e; // 00000|
     std::cout << '|' << std::endl;
+
     for (int i = 0; i < n; ++i)
-        std::cout << f[i];
+        std::cout << f[i]; // 123000|
     std::cout << '|' << std::endl;
+    
     for (int i = 0; i < n; ++i)
-        std::cout << g[i];
+        std::cout << g[i]; // 000000|
     std::cout << '|' << std::endl;
-delete[] f;
+    
+    delete[] f;
     delete[] g;
 }
