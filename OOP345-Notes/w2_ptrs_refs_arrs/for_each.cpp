@@ -6,7 +6,8 @@
 #include <iostream>
 int main () {
     int a[]{1, 2, 3, 4, 5, 6};
-for (int& e : a)
+
+    for (int& e : a)
         std::cout << e << ' ';
     std::cout << std::endl;
 }
