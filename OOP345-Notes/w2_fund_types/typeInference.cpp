@@ -6,6 +6,7 @@
 
 #include <iostream>
 int main () {
+    // Auto cannot appear in the top-level declaration of an array type!
     int a[] {1, 2, 3, 4, 5, 6};
     const auto n = 6;   // Infers int from value of 6
     for (auto i = 0; i < n; i++)    // Infers int from value of 0
