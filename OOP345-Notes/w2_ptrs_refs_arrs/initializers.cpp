@@ -10,7 +10,7 @@ int main() {
     int* f = new int[n]{ 1,2,3 };
     int* g = new int[n]{};
 
-    for (int e : a) // range-based for (see below)
+    for (int e : a) // range-based for (see for_each.cpp)
         std::cout << e; // 123|
     std::cout << '|' << std::endl;
 
