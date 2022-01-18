@@ -14,3 +14,5 @@ int main() {
 
     return(0);
 }
+
+// The universal form is recommended.  It checks the type of the value against the declared type and reports an error in the case of any mismatch.  Since this form does not admit a narrowing of information, it is type-safe.
