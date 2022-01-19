@@ -1,5 +1,8 @@
 // Unnamed Namespace for dot and hat
 // dot_hat.cpp
+
+// The function definition fill() is visible to namespaces dot and hat, which are within the translation unit dot_hat.cpp.  fill() is invisible outside dot_hat.cpp.
+
 #include "dot.h"
 #include "hat.h"
 namespace {
