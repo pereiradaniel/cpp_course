@@ -7,6 +7,7 @@
 
 #include <iostream>	
 class Array {
+    // Default member initializers
     int* a = nullptr;
     unsigned n = 0u;
     int dummy = 0;
@@ -34,12 +35,20 @@ public:
 int main() {
     const unsigned size = 5;
     Array a(size), b; // 
+
+    // Fill Array a
     for (unsigned i = 0u; i < a.size(); ++i)
         a[i] = 3 * i;
+
+    // Print the contents of a
     for (unsigned i = 0u; i < a.size(); ++i)
         std::cout << a[i] << ' '; // 0 3 6 9 12
     std::cout << std::endl;
+    
+    // Copy contents of a into b
     b = a; // copy-assignment
+
+    // Print the contents of b
     for (unsigned i = 0u; i < b.size(); ++i)
         std::cout << a[i] << ' '; // 0 3 6 9 12
     std::cout << std::endl;
