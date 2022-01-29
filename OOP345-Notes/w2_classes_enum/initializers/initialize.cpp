@@ -27,3 +27,7 @@ int main() {
     std::cout << c.itemName() << ' ' << c.itemNo() << '\n'; // grape 6
     std::cout << nItems << std::endl; // 2
 }
+
+// Member List Initializers
+
+// Any constructor of a class can initialize a data member directly.  Initialization takes the form of the data member's name followed by the initial value enclosed within braces.  Initializations are comma-separated and follow a single colon after the closing parenthesis of the constructor's header:
