@@ -2,7 +2,9 @@
 // classVariable.cpp
 #include <iostream>
 #include "classVariable.h"
+
 unsigned Horse::noHorses = 0; // initializer 
+
 Horse::Horse(unsigned a) :
 age{a}, no{++noHorses} {}
 void Horse::display() const {
@@ -24,7 +26,7 @@ int main() {
         std::cout << Horse::noHorses
         << " horses" << std::endl;
         std::cout << silver.noHorses
-        << " horses" << std::endl;
+         << " horses" << std::endl;
         std::cout << northernDancer.noHorses
         << " horses" << std::endl;
     }
