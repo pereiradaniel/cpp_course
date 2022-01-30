@@ -27,6 +27,7 @@ public:
         return *this;
     }
     ~Array() { delete [] a; } // destructor
+    // lvalue and rvalue versions of subscripting operators
     int& operator[](unsigned i) { return n > 0u && i < n ? a[i] : dummy; }
     int operator[](unsigned i) const { return n > 0u && i < n ? a[i] : dummy; }
     unsigned size() const { return n; }
