@@ -3,10 +3,10 @@
 #include <iostream>
 #include "maximum.h"
 
-const char* maximum(const char* a, const char* b) {
-    std::cout << "in overloaded function\n";
-    return std::strcmp(a, b) > 0 ? a : b;
-}
+// const char* maximum(const char* a, const char* b) {
+//     std::cout << "in overloaded function\n";
+//     return std::strcmp(a, b) > 0 ? a : b;
+// }
 
 int main(int argc, char* argv[]) {
     if (argc > 4) {
