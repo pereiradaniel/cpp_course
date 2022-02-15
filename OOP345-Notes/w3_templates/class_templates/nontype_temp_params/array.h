@@ -1,10 +1,9 @@
 // Non-Type Template Parameters
 // array.h
 
-// Non-type template parameters can receive the size of an array.
 template <class T, int size>
 class Array {
-    T a[size];
+    T a[size]; // Non-type template parameters can receive the size of an array.
     unsigned n;
     T dummy;
 public:

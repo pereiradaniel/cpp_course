@@ -13,6 +13,9 @@
 #include "array.h"
 
 int main() {
+    // s and t are instances of class Array<>
+    // u is an instance of the separate class Array<double>
+    // v is an instance of the separate class Array<int, 40>
     Array<> s, t;
     Array<double> u;
     Array<int, 40> v;
