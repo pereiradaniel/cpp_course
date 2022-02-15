@@ -1,7 +1,9 @@
 // Function Template
 // swap.cpp
+// The following program uses this template to swap two doubles and two longs:
 #include <iostream>
 #include "swap.h"
+// Command args: 2.3 4.5 78 567
 int main(int argc, char* argv[]) {
     if (argc > 4) {
         double a = atof(argv[1]);
