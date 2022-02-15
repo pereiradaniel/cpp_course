@@ -1,6 +1,8 @@
 // Template Specialization
 // maximum_overload.cpp
 
+// As an alternative to specialization we could overload the function for the const char* type.  Since the compiler resolves overloading before instatiating any specialization, the specialization would be redundant.  In principle, good design prefers overloading to the equivalent speciailzation, and only specializes when it is required. 
+
 #include <iostream>
 #include "maximum.h"
 

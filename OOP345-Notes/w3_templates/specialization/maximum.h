@@ -8,6 +8,7 @@ T maximum(T a, T b) {
     return a > b ? a : b;
 }
 
+// The following example determines the maximum of two doubles and two C-style strings:
 // specialization for char* types
 template <> // denotes specialization
 const char* maximum<const char*>(const char* a, const char* b) {

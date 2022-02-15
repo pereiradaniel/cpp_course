@@ -1,6 +1,10 @@
 // Array
 // array.cpp
 
+// A template declaration for a family of classes follows the same rules as a template declaration for a family of functions.
+
+// Consider a class that contains an array of up to 50 ints:
+
 #include <iostream>
 #include "array.h"
 

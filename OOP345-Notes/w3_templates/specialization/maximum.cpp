@@ -8,6 +8,8 @@
 //     return std::strcmp(a, b) > 0 ? a : b;
 // }
 
+// Consider a function template for returning the maximum value of two arguments:
+// Command line args: 2.3 4.5 abc def
 int main(int argc, char* argv[]) {
     if (argc > 4) {
         double a = atof(argv[1]);
