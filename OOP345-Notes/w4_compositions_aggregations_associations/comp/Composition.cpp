@@ -12,3 +12,5 @@ int main() {
      p = q;
      p.display();
  }
+
+//  The implementation files for both versions are listed below.  The Name object does not exist apart from the Person object.  In the subobject version, the default copying and assignment rules apply: the default copy constructor, assignment operator and destructor are sufficient.  In the pointer version, deep copying and assignment are required and we must code the copy constructor, assignment operator and destructor.  The Person constructor creates the Name object, the assignment operator destroys the old Name object and creates a new one, and the destructor destroys the Name object. 
