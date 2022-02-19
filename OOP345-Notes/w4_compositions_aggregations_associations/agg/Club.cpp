@@ -4,12 +4,16 @@
 #include <cstring>
 #include "Club.h"
 #include "Name.h"
-Club& Club::operator+=(const Name& n) {
+
+Club& Club::operator+=(const Name& n)
+{
     if (m < M)
         name[m++] = &n;
     return *this;
 }
-Club& Club::operator-=(const Name& t) {
+
+Club& Club::operator-=(const Name& t)
+{
     bool found = false;
     int i;
     for (i = 0; i < m && !found; i++)
@@ -25,7 +29,8 @@ Club& Club::operator-=(const Name& t) {
     }
     return *this;
 }
-void Club::display() const {
+void Club::display() const
+{
     for (int i = 0; i < m; i++)
         std::cout << name[i]->get()
         << std::endl;
