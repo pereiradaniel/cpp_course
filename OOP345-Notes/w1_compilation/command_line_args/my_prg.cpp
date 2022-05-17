@@ -1,6 +1,12 @@
 // Interfacing with the Host Platform
 // my_prg.cpp
 
+// argc = number of arguments
+// argv = array of arguments
+
+// Second argument receives an address of an array of pointers to C-style null-terminated strings.
+//     - Each pointer holds the address of a string that holds one //     command-line argument.
+
 #include <iostream>
 int main(int argc, char *argv[])
 {
