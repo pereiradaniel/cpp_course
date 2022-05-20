@@ -10,7 +10,11 @@ public:
     Array(){}
     Array(unsigned no) : a(new int[no]), n(no){}
     Array(const Array& src) { *this = src; } // copy constructor
-    Array(Array&& src) { *this = std::move(src); } // move constructor prototype 
+    
+    // ***move-constructor prototype***
+    // receives rvalue reference to source object
+    Array(Array&& src) { *this = std::move(src); } 
+    
     // copy assignment
     Array& operator=(const Array& src) {
         if (this != &src) {
@@ -22,20 +26,27 @@ public:
         }
         return *this;
     }
+    
+    // ***move-assignment operator***
+    // receives rvalue reference to source object
     Array& operator=(Array&& src) {
         if (this != &src) {
             delete [] a; // deallocate current resource
             a = src.a;   // copy address to current object 
             src.a = nullptr; // initialize source resource 
             // swap instance variables
-            n = src.n;
-            dummy = src.dummy;
-            src.n = 0u;
-            src.dummy = 0;
+                // this = src
+                n = src.n;
+                dummy = src.dummy;
+                // src = DEFAULTS
+                src.n = 0u;
+                src.dummy = 0;
         }
         return *this;
     }
-    ~Array() { delete [] a; }
+    
+    ~Array() { delete [] a; }       // destructor
+    
     int& operator[](unsigned i) {
         return n > 0u && i < n ? a[i] : dummy; }
     int operator[](unsigned i) const {
@@ -46,11 +57,13 @@ public:
 int main() {
     const unsigned size = 5;
     
-    Array a(size), b; // copy constructor, default constructor
+    Array a(size), b; // 1 arg constructor, default constructor
+    
     // Fill Array a
     for (unsigned i = 0u; i < a.size(); ++i)
         a[i] = 3 * i;
     
+    // Display Array a contents
     std::cout << "Copy-Assignment\n";
     std::cout << "a : ";
     for (unsigned i = 0u; i < a.size(); ++i)
@@ -58,31 +71,36 @@ int main() {
     std::cout << std::endl;
     
     // Fill Array b with contents of a
-    b = a; // calls copy-assignment
+    b = a; // ***calls copy-assignment***
     std::cout << "b : ";
     
+    // Display contents of array b
     for (unsigned i = 0u; i < b.size(); ++i)
         std::cout << b[i] << ' ';
     std::cout << std::endl;
     
+    // Display contents of array a
     std::cout << "a : ";
     for (unsigned i = 0u; i < a.size(); ++i)
         std::cout << a[i] << ' ';
     std::cout << std::endl;
 
+    // Display contents of array a
     std::cout << "Move-Assignment\n";
     std::cout << "a : ";
     for (unsigned i = 0u; i < a.size(); ++i)
         std::cout << a[i] << ' ';
     std::cout << std::endl;
     
-    b = std::move(a); // calls move-assignment
+    b = std::move(a); // ***calls move-assignment***
     
+    // Display contents of array b
     std::cout << "b : ";
     for (unsigned i = 0u; i < b.size(); ++i)
         std::cout << b[i] << ' ';
     std::cout << std::endl;
-    
+
+    // Display contents of array a (initialized to 0 elements)    
     std::cout << "a : ";
     for (unsigned i = 0u; i < a.size(); ++i)
         std::cout << a[i] << ' ';

@@ -12,22 +12,26 @@ class Array {
     unsigned n = 0u;
     int dummy = 0;
 public:
-    Array(){}
-    Array(unsigned no) : a(new int[no]), n(no){}
-    Array(const Array& src) { *this = src; }
-    // copy-assignment
-    Array& operator=(const Array& src) {
+    Array(){}                                       // Default constructor
+    Array(unsigned no) : a(new int[no]), n(no){}    // 1 argument, 2 defaults
+    
+    Array(const Array& src) { *this = src; }        // ***copy-constructor***
+
+    Array& operator=(const Array& src) {            // ***copy-assignment***
         if (this != &src) {
-            delete [] a;
-            a = new int[src.n];
-            for (unsigned i = 0u; i < src.n; ++i)
-                a[i] = src.a[i];
-            n = src.n;
+            delete [] a;            // Delete int array a
+            a = new int[src.n];     // Set a to new int array of src.n size
+            for (unsigned i = 0u; i < src.n; ++i)   // Loop through src.n times
+                a[i] = src.a[i];    // this.a[i] set to src.a[i]
+            n = src.n;              // uns int n set to number of elements src.n
         }
         return *this;
     }
-    ~Array() { delete [] a; } // destructor
+
+    ~Array() { delete [] a; }                       // destructor
+    
     // lvalue and rvalue versions of subscripting operators
+    // If n is gtr 0u and i less than n(num elements) then let a[i] else 0
     int& operator[](unsigned i) { return n > 0u && i < n ? a[i] : dummy; }
     int operator[](unsigned i) const { return n > 0u && i < n ? a[i] : dummy; }
     unsigned size() const { return n; }
