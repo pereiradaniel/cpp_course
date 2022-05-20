@@ -8,5 +8,5 @@ class Horse {
      Horse(unsigned a);
      void display() const;
      ~Horse();
-     static unsigned howMany();
+     static unsigned howMany(); // class function
  };
