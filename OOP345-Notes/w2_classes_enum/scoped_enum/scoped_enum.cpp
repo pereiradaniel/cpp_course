@@ -1,8 +1,10 @@
 // Scoped Enumerations
 // scoped_enum.cpp
+
 #include <iostream>
 // define the Colour type
 enum class Colour {white, red, green, blue};
+
 std::ostream& operator<<(std::ostream& os,
 const Colour& colour) {
     std::string str;

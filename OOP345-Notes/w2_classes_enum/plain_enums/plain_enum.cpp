@@ -1,8 +1,10 @@
 // Plain Enumerations
 // plain_enum.cpp	
-#include <iostream>	red white green 
+#include <iostream>
+
 // define the Colour enumeration type
 enum Colour {white, red, green, blue};
+
 std::ostream& operator<<(std::ostream& os,
 const Colour& colour) {
     std::string str;
@@ -25,6 +27,7 @@ const Colour& colour) {
     os << str.c_str();
     return os;
 }
+
 int main() {
     Colour wall, ceiling, door; // define Colour variables 
     wall = red;
