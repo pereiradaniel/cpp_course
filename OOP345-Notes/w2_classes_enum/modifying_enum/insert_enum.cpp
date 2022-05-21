@@ -34,6 +34,6 @@ int main() {
     ceiling = Colour::white;
     door = Colour::green;
     window = Colour::yellow;
-    std::cout << wall << ' ' window << ' '
+    std::cout << wall << ' ' << window << ' '
     << ceiling << ' ' << door << std::endl;
 }
