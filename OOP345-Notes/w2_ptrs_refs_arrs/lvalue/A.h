@@ -5,9 +5,9 @@
 class B;
 class A {
 
-B& d; // no initializer required: class member declaration
+    B& d; // no initializer required: class member declaration
 
-public:
+    public:
     A(B& bb); // no initializer required: function parameter declaration
 };
 
