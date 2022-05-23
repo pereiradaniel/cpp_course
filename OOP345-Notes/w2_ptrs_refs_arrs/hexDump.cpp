@@ -2,7 +2,6 @@
 // hexDump.cpp
 
 // The function hexDump() listed below displays the contents of a region of memory regardless of the type associated with that region.  The function receives the region's address and its size in number of bytes.  It casts the generic pointer a to a pointer to an unsigned char and displays the contents of c[i] in hexadecimal notation:
-
 #include <iostream>
 #include <iomanip>
 
