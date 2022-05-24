@@ -35,12 +35,11 @@ public:
             a = src.a;   // copy address to current object 
             src.a = nullptr; // initialize source resource 
             // swap instance variables
-                // this = src
-                n = src.n;
-                dummy = src.dummy;
-                // src = DEFAULTS
-                src.n = 0u;
-                src.dummy = 0;
+            n = src.n;
+            dummy = src.dummy;
+            // Initialize source
+            src.n = 0u;
+            src.dummy = 0;
         }
         return *this;
     }
