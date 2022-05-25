@@ -44,7 +44,7 @@ void show(const A* a) {
 }
 
 int main() {
-    A* a[3];
+    A* a[3];    // array of size 3 of ptrs to A
     a[0] = new A(3);
     a[1] = new B(2, 5);
     a[2] = new C(4, 6, 7);

@@ -15,9 +15,9 @@
      return len * len * len;
  }
 
- bool Cube::operator==(const Shape& s)
-  const {
-     const Cube* c =
-      dynamic_cast<const Cube*>(&s);
-     return c ? len == c->len : false;
+// We define each query in the Cube and Sphere implementations and use the dynamic_cast template to cast the type of the address received in the parameter to an address of the object's dynamic type:
+ bool Cube::operator==(const Shape& s) const {
+    const Cube* c =
+    dynamic_cast<const Cube*>(&s);
+    return c ? len == c->len : false;
  }

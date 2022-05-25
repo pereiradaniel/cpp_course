@@ -9,6 +9,5 @@ public:
     Sphere(double);
     void display() const;
     double volume() const;
-    bool operator==(const Shape&)
-    const;
+    bool operator==(const Shape&) const;
 };

@@ -15,8 +15,8 @@ double Sphere::volume() const {
     return 4.18879 * rad * rad * rad;
 }
 
-bool Sphere::operator==(const Shape& s)
-const {
+// We define each query in the Cube and Sphere implementations and use the dynamic_cast template to cast the type of the address received in the parameter to an address of the object's dynamic type:
+bool Sphere::operator==(const Shape& s) const {
     const Sphere* c =
     dynamic_cast<const Sphere*>(&s);
     return c ? rad == c->rad : false;
