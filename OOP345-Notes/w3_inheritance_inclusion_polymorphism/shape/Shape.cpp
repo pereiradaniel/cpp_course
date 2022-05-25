@@ -1,12 +1,13 @@
 // Shape Hierarchy
 // Shape.cpp
+
 #include <iostream>
 #include "Cube.h"
 #include "Sphere.h"
 
 void displayVolume(const Shape* shape) {
     if (shape)
-        std::cout << shape->volume() << std::endl;
+        std::cout << shape->volume() << std::endl; 
     else
         std::cout << "error" << std::endl;
 }
@@ -17,7 +18,6 @@ Shape* select() {
     char c;
     std::cout << "s (sphere), c (cube) : ";
     std::cin >> c;
-
     if (c == 's') {
         std::cout << "dimension : ";
         std::cin >> x;
@@ -30,11 +30,9 @@ Shape* select() {
         shape = nullptr;
     return shape;
 }
+
 int main() {
     Shape* shape = select();
-    Shape* clone = shape->clone();
     displayVolume(shape);
-    displayVolume(clone);
-    delete clone;
     delete shape;
 }
