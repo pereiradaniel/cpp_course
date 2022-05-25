@@ -1,15 +1,14 @@
-// A Cube
-// Cube.cpp
-#include "Cube.h"
+ // Polymorphic Objects - Cloning
+ // Cube.cpp
 
-// One-argument constructor
-Cube::Cube(double l) : len{l} {}
+ #include "Cube.h"
 
-// The Cube and Sphere implementation files define the class specific versions of the clone() member function:
-Shape* Cube::clone() const {
+ Cube::Cube(double l) : len(l) {}
+
+ Shape* Cube::clone() const {
      return new Cube(*this);
  }
 
-double Cube::volume() const {
-    return len * len * len;
-}
+ double Cube::volume() const {
+     return len * len * len;
+ }

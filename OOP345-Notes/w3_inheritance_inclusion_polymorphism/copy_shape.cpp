@@ -4,9 +4,10 @@
 
 // Copy a Shape Object
 // copy_shape.cpp
-// #include "Shape.h"
+#include "Shape.h"
 
-// Shape* copy(const Shape& original) {
-//     Shape* copy = new ???? (original); 
-//     return copy;
-// }
+Shape* copy(const Shape& original) {
+    // To determine the dynamic type at run-time we introduce a cloning member function to the hierarchy.
+    Shape* copy = new ???? (original); 
+    return copy;
+}
