@@ -2,12 +2,6 @@
 // maximum.cpp
 #include <iostream>
 #include "maximum.h"
-
-// const char* maximum(const char* a, const char* b) {
-//     std::cout << "in overloaded function\n";
-//     return std::strcmp(a, b) > 0 ? a : b;
-// }
-
 // Consider a function template for returning the maximum value of two arguments:
 // Command line args: 2.3 4.5 abc def
 int main(int argc, char* argv[]) {
