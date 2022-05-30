@@ -5,11 +5,11 @@
 class Name {
     char* name { nullptr };
 public:
-    Name(const char*);
-    Name(const Name&);
-    Name& operator=(const Name&); 
-    ~Name();
-    const char* get() const;
-    void set(const char*);
+    Name(const char*);              // 1-Arg Constructor
+    Name(const Name&);              // Copy Constructor
+    Name& operator=(const Name&);   // Assignment Operator
+    ~Name();                        // Destructor
+    const char* get() const;        // Getter
+    void set(const char*);          // Setter
 };
 #endif

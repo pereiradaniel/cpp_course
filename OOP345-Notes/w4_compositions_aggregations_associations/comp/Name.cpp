@@ -6,9 +6,13 @@ Name::Name(const char* n) :
 name {new char[std::strlen(n) + 1]} {
     std::strcpy(name, n);
 }
+
+// Copy Constructor
 Name::Name(const Name& src) {
     *this = src;
 }
+
+// Assignment Operator
 Name& Name::operator=(const Name&  src) { 
     if (this != &src) {
         delete [] name;
