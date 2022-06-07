@@ -1,10 +1,5 @@
 // Trailing Return - Enumeration within a class
 // auto_return.cpp
-
-/* Enumeration defined within a class
-
-Consider the function get() in the following program.  When the compiler starts processing its definition the return type (TicketType) is unknown.  TicketType is defined in class scope.  Initially, the compiler is unaware that the return type is defined inside the Ticket class.  Only after the compiler becomes aware from the identifier Ticket::get() that the function is a member of the Ticket class can it accept the return type: */
-
 #include <iostream>
 
 class Ticket {
@@ -35,7 +30,11 @@ const Ticket::TicketType& tt) {
 
 void Ticket::set(TicketType tt) { ticketType = tt; }
 
-auto Ticket::get() const -> TicketType { return ticketType; } 
+// Compiler is unaware of TicketType being defined inside Ticket class until after it becomes aware from identifier Ticket::get() that function is a member of the Ticket class can it accept the return type
+
+auto Ticket::get() const -> TicketType { return ticketType; }
+// Without auto and Trailing Return Type we need to scope the return type by adding the class name:
+// Ticket::TicketType Ticket::get() const { return ticketType; }
 
 int main () {
     Ticket a, b;
@@ -44,13 +43,3 @@ int main () {
     std::cout << a.get() << std::endl;
     std::cout << b.get() << std::endl;
 }
-
-/* Without auto and the trailing return-type in the definition of get(), we need to scope the return type (TicketType) by adding the class name; that is, to write:
-
- Ticket::TicketType Ticket::get() const { return ticketType; } 
-instead of:
-
- TicketType Ticket::get() const { return ticketType; } 
-In other words, the trailing return type simplifies the syntax for such cases. */
-
-// https://ict.senecacollege.ca/~oop345/pages/content/funct.html
