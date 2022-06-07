@@ -1,14 +1,13 @@
 // Recursive Functions
 // fibonacci.cpp
 
-/* A recursive function is a function that calls itself from within its own body.  Recursive functions require an exit condition that defines when the recursion terminates.  Once it terminates control begins stepping back through the function call stack to the initial caller.  The exit condition prevents stack overflow caused by an ever increasing set of recursive calls. 
-
-The following program uses a recursive function to calculate factorials: */
-
 #include <iostream>
 
 unsigned factorial(unsigned x) {
     return (x > 2u) ? x * factorial(x - 1) : x;
+    // recursion stops once x drops to a value less
+    // than or equal to 2u.
+    // takes up a lot of stack space
 }
 
 int main () {

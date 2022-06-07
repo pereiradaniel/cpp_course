@@ -1,9 +1,7 @@
 // Recursive Functions
 // iteration.cpp
 
-/* Stack Space Alternative
-
-Stack space is a precious resource.  The alternative to highly recursive logic is an iteration construct.  The function listed above can be rewritten as follows: */
+// alternative to recursive is an iteration construct
 
 #include <iostream>
 
