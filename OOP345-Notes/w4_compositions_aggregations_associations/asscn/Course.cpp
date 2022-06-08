@@ -4,26 +4,26 @@
 #include "Course.h"
 #include "Room.h"
 
-Course::Course(const char* n, int c) // rx's name and rm no.
+Course::Course(const char* n, int c)
 :
-    name{n},
-    code{c}
+    name{n}, // course name
+    code{c} // course code
 {}
 
-void Course::book(Room& r) // adds Room pointer to Course
+void Course::book(Room& r)
 {
-    if (room) room->release(); // if room exists, remove
-    room = &r; // set room to new Room pointer
+    if (room) room->release(); // removes previous booking room
+    room = &r; // sets room to new room
 }
 
-void Course::release() // removes Room from Course
+void Course::release()
 {
-    room = nullptr; // just set this Room pointer to nullptr
+    room = nullptr;
 }
 
-const char* Course::get() const // query that returns the name
+const char* Course::get() const
 {
-    return name.get();
+    return name.get(); // return Course name
 }
 
 void Course::display() const

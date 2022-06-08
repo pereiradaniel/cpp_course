@@ -23,6 +23,7 @@
 // 2-Arg Constructor
 Person::Person(const char* n, int a) :
 name {new Name(n)}, age {a} {}
+// The Person constructor creates the Name object.
 
 // Copy Constructor
 Person::Person(const Person& src) {
@@ -38,8 +39,13 @@ Person& Person::operator=(const Person& src) {
     }
     return *this;
 }
+// The assignment operator destroys the old Name object and creates a new one.
 
-Person::~Person() { delete name; }
+Person::~Person() {
+    delete name;
+}
+// Destructor destroys the name object.
+
 void Person::display() const {
     std::cout << age << ' ' <<
     name->get() << std::endl;

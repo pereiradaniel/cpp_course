@@ -3,8 +3,8 @@
 #include "Name.h"
 class Course;
 class Room {
-    Name name; // Required!
-    Course* course { nullptr };  // default to nptr because doesn't require this relationship to exist!
+    Name name; // Room name
+    Course* course { nullptr };  // no courses initial
 public:
     Room(const char*);
     void book(Course&);

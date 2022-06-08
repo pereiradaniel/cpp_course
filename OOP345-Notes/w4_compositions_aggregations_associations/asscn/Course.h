@@ -1,6 +1,8 @@
 // Association
 // Course.h
 #include "Name.h"
+// Forward declaration: Declare a class type which will be
+// defined later in this scope.
 class Room;
 class Course {
     Name name;

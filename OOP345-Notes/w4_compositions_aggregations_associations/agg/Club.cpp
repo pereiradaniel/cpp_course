@@ -7,9 +7,9 @@
 
 Club& Club::operator+=(const Name& n)
 {
-    if (m < M)
-        name[m++] = &n;
-    return *this;
+    if (m < M) // check if name list is full
+        name[m++] = &n; // add the address to name n to the list
+    return *this; // return this club
 }
 
 Club& Club::operator-=(const Name& t)
